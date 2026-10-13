@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome To the World</title>
+</head>
+<body>
+    <h1>Welcome To the World</h1>
+    <input type="text" id="name"
+           placeholder="Enter your name">
+    <button id="btn">Submit</button>
+    <p id="result"></p>
+    <script>
+        const button=document.getElementById("btn");
+        const nameInput=document.getElementById("name");
+        const result=document.getElementById("result");
+        button.addEventListener("click", function() {
+            const name=nameInput.value.trim();
+            if (name==="") {
+                result.textContent="Please enter your name.";
+            }else{
+                result.textContent="Hello and Welcome  ,"+name+"!";
+            }
+        });
+    </script>
+</body>
+</html>
